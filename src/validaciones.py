@@ -1,6 +1,4 @@
-
-def leer_entero(mensaje, minimo, maximo):
-
+def pedir_numero(mensaje, minimo, maximo):
     while True:
         try:
             valor = int(input(mensaje))
@@ -12,17 +10,15 @@ def leer_entero(mensaje, minimo, maximo):
             print("  Error: debe escribir un numero entero.")
 
 
-def leer_texto(mensaje):
-
+def pedir_texto(mensaje):
     while True:
         texto = input(mensaje).strip()
         if len(texto) >= 3:
             return texto
-        print("  Error: debe escribir al menos", 3, "caracteres.")
+        print("  Error: debe escribir al menos 3 caracteres.")
 
 
-def confirmar(mensaje):
-
+def preguntar(mensaje):
     while True:
         respuesta = input(mensaje + " (S/N): ").strip().lower()
         if respuesta == "s" or respuesta == "si" or respuesta == "sí":
@@ -32,14 +28,5 @@ def confirmar(mensaje):
         print("  Error: responda S para si o N para no.")
 
 
-def pausar():
+def pausa():
     input("\nPresione ENTER para continuar...")
-
-
-def limitar(valor, minimo, maximo):
-
-    if valor < minimo:
-        return minimo
-    if valor > maximo:
-        return maximo
-    return valor
